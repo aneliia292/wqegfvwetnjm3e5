@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <p>Название товара</p>
+            <input type="text" name="name" value="{{ el.name }}">
+        <div>
+        <div>
+            <p>Описание товара</p>
+            <input type="text" name="name" value="{{ el.name }}">
+        <div>
+        <div>
+            <p>Цена</p>
+            <input type="number" name="price" value="{{ el.age }}">
+        </div>
+            <button>Refactor</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Каталог</title>
+</head>
+<body>
+    <h1>Каталог товаров</h1>
+    {% for el in product %}
+    <div class="cards">
+        <h1>{{ el.name }}</h1>
+        <p>{{ el.view }}</p>
+        <p>{{ el.price }}</p>
+    </div>
+    <div>
+        <button><a class="btn_main" href="{% url 'update' el.id %}">Редактировать</a></button>
+        <button><a class="btn_main" href="{% url 'delete' el.id %}">Удалить</a></button>
+    </div>
+    <hr>
+    {% endfor %}
+    <button><a class="btn_main" href="{% url 'create' %}">Добавить товары</a></button>
+</body>
+</html>
